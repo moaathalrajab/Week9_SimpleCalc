@@ -46,12 +46,34 @@ public class PrimaryController {
          
          
     }
-
+    
+ String opd1="", arthOp="";
+ 
     @FXML
     private void processArthOp(ActionEvent event) {
+       
+        switch(((Button)event.getSource()).getText()){
+              case "+": {
+                 opd1 = tf_Output.getText().toString().trim();
+                 arthOp="ADD";
+                 tf_Output.setText("");
+              }
+               break;
+              case "x": tf_Output.setText(tf_Output.getText() + "2"); break;
+              
+        }
+              
     }
 
     @FXML
     private void processEqual(ActionEvent event) {
+        if(arthOp.equals("ADD")){
+            tf_Output.setText(
+            
+               ""+( Integer.parseInt(opd1) + Integer.parseInt(tf_Output.getText().trim()) )
+            
+            );
+            
+        }
     }
 }
