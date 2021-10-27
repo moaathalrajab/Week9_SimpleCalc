@@ -27,6 +27,24 @@ public class PrimaryController {
 
     @FXML
     private void processDigit(ActionEvent event) {
+        
+        if(tf_Output.getText().endsWith("0")) tf_Output.setText("");
+       
+
+         switch(((Button)event.getSource()).getText()){
+              case "1": tf_Output.setText(tf_Output.getText() + "1"); break;
+              case "2": tf_Output.setText(tf_Output.getText() + "2"); break;
+              case "3": tf_Output.setText(tf_Output.getText() + "3"); break;
+              case "4": tf_Output.setText(tf_Output.getText() + "4"); break;
+              case "5": tf_Output.setText(tf_Output.getText() + "5"); break;
+              case "6": tf_Output.setText(tf_Output.getText() + "6"); break;
+              case "7": tf_Output.setText(tf_Output.getText() + "7"); break;
+              case "8": tf_Output.setText(tf_Output.getText() + "8"); break;
+              case "9": tf_Output.setText(tf_Output.getText() + "9"); break;
+              case "0": tf_Output.setText(tf_Output.getText() + "0"); break;
+         }
+         
+         
     }
 
     @FXML
